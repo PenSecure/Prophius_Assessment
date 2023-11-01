@@ -64,7 +64,7 @@ Infrastructure Setup Steps:
     [Example Code: output.tf](https://github.com/PenSecure/Prophius_Assessment/blob/main/output.tf)
 
 11. Infrastructure Deployment:
-    - Clone the GitHub repository.
+    - Clone the GitHub repository. "https://github.com/PenSecure/Prophius_Assessment.git"
     - Initialize Terraform: $ terraform init.
     - Apply changes: $ terraform apply -auto-approve.
 
@@ -75,5 +75,5 @@ Infrastructure Setup Steps:
 13. (Optional) Automated Deployment using AWS CodePipeline:
     - Set up S3 bucket for CodePipeline artifacts.
     - Create an IAM role for CodePipeline.
-    - Uncomment “terraform-buildspec.yml” in the source code
+    - Uncomment “terraform-buildspec.yml” in the source code.
     - Configure AWS CodePipeline stages (Source, Build).
