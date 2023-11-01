@@ -68,12 +68,12 @@ Infrastructure Setup Steps:
     - Initialize Terraform: $ terraform init.
     - Apply changes: $ terraform apply -auto-approve.
 
-12. Connecting to EKS Cluster:
-    - Update Kubernetes context: `$ aws eks update-kubeconfig --name eks-terraform-project --region us-east-1`.
-    - Verify access: `$ kubectl get nodes`.
-
 13. (Optional) Automated Deployment using AWS CodePipeline:
     - Set up S3 bucket for CodePipeline artifacts.
     - Create an IAM role for CodePipeline.
     - Uncomment “terraform-buildspec.yml” in the source code.
     - Configure AWS CodePipeline stages (Source, Build).
+
+13. Connecting to EKS Cluster:
+    - Update Kubernetes context: `$ aws eks update-kubeconfig --name eks-terraform-project --region us-east-1`.
+    - Verify access: `$ kubectl get nodes`.
