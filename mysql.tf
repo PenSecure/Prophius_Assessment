@@ -11,6 +11,7 @@ resource "aws_db_instance" "mysql" {
   vpc_security_group_ids  = [aws_security_group.mysql_sg.id]
   db_subnet_group_name    = aws_db_subnet_group.mysql_subnet_group.name
 
+  multi_az		= true  # Enable Multi-AZ deployment 
 #  skip_final_snapshot = true
 }
 

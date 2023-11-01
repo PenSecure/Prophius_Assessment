@@ -1,0 +1,39 @@
+# version: 0.2
+
+# env:
+#   variables:
+#     TERRAFORM_VERSION: "1.4.6"
+#     #TF_COMMAND: "apply"
+#     TF_COMMAND: "destroy"
+
+# phases:
+#   install:
+#     runtime-versions:
+#       python: 3.9
+#     on-failure: ABORT
+#     commands:
+#       - tf_version=$TERRAFORM_VERSION
+#       - wget https://releases.hashicorp.com/terraform/1.4.6/terraform_1.4.6_linux_amd64.zip
+#       - unzip terraform_"$TERRAFORM_VERSION"_linux_amd64.zip
+#       - mv terraform /usr/local/bin/
+#   pre_build:
+#     on-failure: ABORT
+#     commands:
+#       - echo terraform execution started on `date`
+#   build:
+#     on-failure: ABORT
+#     commands:
+#       - echo $$CODEBUILD_SRC_DIR
+#       - cd "$CODEBUILD_SRC_DIR/"
+#       - ls -lrt "$CODEBUILD_SRC_DIR/"
+#       - pwd
+#       - terraform --version
+#       - terraform init
+#       # - TF_LOG=debug terraform apply -auto-approve
+#       # - terraform validate
+#       # - terraform plan -lock=false -input=false -var-file=prod.tfvars
+#       - terraform $TF_COMMAND -auto-approve
+#   post_build:
+#     on-failure: CONTINUE
+#     commands:
+#       - echo terraform apply completed on `date` !!!
